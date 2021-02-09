@@ -56,7 +56,7 @@ export default class SignIn extends Component {
     render() {
         return (
             <div className="form-container">
-                <h3>Sign-In</h3>
+                <h3 className="form-header">Sign-In</h3>
                 <form onSubmit={ this.onSubmit }>
                     <div className="form-group"> 
                         <label>Username: </label>

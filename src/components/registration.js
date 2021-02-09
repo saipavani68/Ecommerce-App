@@ -67,7 +67,7 @@ export default class Registration extends Component {
     render() {
         return (
             <div className="form-container">
-                <h3>Create your account</h3>
+                <h3 className="form-header">Create your account</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 
                         <label>Username: </label>
