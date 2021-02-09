@@ -14,25 +14,30 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div>
+          <nav className="navbar navbar-expand-lg navbar-light">
             <a className="navbar-brand" href="https://codingthesmartway.com" target="_blank">
               <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
             </a>
-            <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Todos</Link>
+                  <Link to="/products" className="nav-link">Products</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create Todo</Link>
+                  <Link to="/deals" className="nav-link">Today's deals</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/signIn" className="nav-link">Sign in</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/cart" className="nav-link">Cart</Link>
                 </li>
               </ul>
             </div>
           </nav>
           <br/>
-          <Route path="/" exact component={SignIn} />
+          <Route path="/signIn" exact component={SignIn} />
           <Route path="/edit/:id" component={EditTodo} />
           <Route path="/create" component={CreateTodo} />
           <Route path="/register" component={Registration} />
