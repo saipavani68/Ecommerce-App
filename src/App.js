@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import CreateTodo from "./components/create-todo.component";
-import EditTodo from "./components/edit-todo.component";
 import SignIn from "./components/sign-in";
 import Registration from "./components/registration";
 import logo from "./logo.svg";
@@ -38,8 +35,6 @@ class App extends Component {
           </nav>
           <br/>
           <Route path="/signIn" exact component={SignIn} />
-          <Route path="/edit/:id" component={EditTodo} />
-          <Route path="/create" component={CreateTodo} />
           <Route path="/register" component={Registration} />
         </div>
       </Router>
