@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./components/sign-in";
 import Registration from "./components/registration";
+import Products from './components/products';
 import logo from "./logo.svg";
 import './App.css';
 
@@ -36,6 +37,7 @@ class App extends Component {
           <br/>
           <Route path="/signIn" exact component={SignIn} />
           <Route path="/register" component={Registration} />
+          <Route path="/products" component={Products} />
         </div>
       </Router>
     );
