@@ -1,4 +1,4 @@
-# An E-Commerce Application Using MERN Stack
+# An e-commerce application using MERN stack
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
