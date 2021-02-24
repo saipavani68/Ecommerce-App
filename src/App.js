@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./components/sign-in";
 import Registration from "./components/registration";
 import Products from './components/products';
-import logo from "./logo.svg";
 import './App.css';
 
 class App extends Component {
@@ -14,9 +13,6 @@ class App extends Component {
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg navbar-light">
-            <a className="navbar-brand" href="https://codingthesmartway.com" target="_blank">
-              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
-            </a>
             <div className="collpase navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
@@ -34,7 +30,6 @@ class App extends Component {
               </ul>
             </div>
           </nav>
-          <br/>
           <Route path="/signIn" exact component={SignIn} />
           <Route path="/register" component={Registration} />
           <Route path="/products" component={Products} />

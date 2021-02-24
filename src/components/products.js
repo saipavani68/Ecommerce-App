@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import fashionImg from '../images/fashion.jpg';
-import axios from 'axios';
+import blinkMiniImg from '../images/blink_mini.jpg';
+import electronicsSalesImg from '../images/electronics_sale.jpg';
+import './products.css';
 
 export default class Registration extends Component {
     render() {
@@ -13,32 +15,24 @@ export default class Registration extends Component {
                     src={ fashionImg } 
                     alt="First slide" 
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={500}>
+                <Carousel.Item interval={1000}>
                     <img
                     className="d-block w-100"
-                    src="../images/fashion.jpg"
+                    src={ blinkMiniImg }
                     alt="Second slide"
                     />
                     <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h1>SUPER SALE </h1>
+                    <h3> UP TO 25% OFF </h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=Third slide&bg=20232a"
+                    src={ electronicsSalesImg }
                     alt="Third slide"
                     />
-                    <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         )
