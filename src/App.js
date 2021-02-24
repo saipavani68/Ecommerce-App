@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import SignIn from "./components/sign-in";
-import Registration from "./components/registration";
-import Products from './components/products';
+import SignIn from "./components/sign-in.jsx";
+import Registration from "./components/registration.jsx";
+import ProductsContainer from './components/products-container.jsx';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +32,7 @@ class App extends Component {
           </nav>
           <Route path="/signIn" exact component={SignIn} />
           <Route path="/register" component={Registration} />
-          <Route path="/products" component={Products} />
+          <Route path="/products" component={ ProductsContainer } />
         </div>
       </Router>
     );

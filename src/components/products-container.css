@@ -3,7 +3,7 @@
 }
 
 .carousel-caption {
-    bottom: 20% !important;
-    left: 0px !important;
+    bottom: 20%;
+    left: 0px;
     color: black;
 }
