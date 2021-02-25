@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import officeProductsImg from '../images/office_products.jpg';
 import computersImg from '../images/computers.jpg';
 import clothingImg from '../images/clothing.jpg';
-import CardGroup from 'react-bootstrap/CardGroup';
+import CardDeck from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import './product.css';
  
-export default class Product extends Component {
+class Product extends Component {
+
+  handleClick = () => {
+    this.props.history.push('/itemsPage')
+  }
+
 	render() {
 		return (
-      <CardGroup>
-        <Card>
+      <CardDeck>
+        <Card onClick={ this.handleClick }>
           <Card.Img variant="top" src={ officeProductsImg } />
           <Card.Body>
             <Card.Title>Shop Office Furniture</Card.Title>
@@ -19,7 +25,7 @@ export default class Product extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card onClick={ this.handleClick }>
           <Card.Img variant="top" src={ clothingImg } />
           <Card.Body>
             <Card.Title> Shop Latest Fashion Trends </Card.Title>
@@ -28,7 +34,7 @@ export default class Product extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card onClick={ this.handleClick }>
           <Card.Img variant="top" src={ computersImg } />
           <Card.Body>
             <Card.Title>Shop Computers & Accessories </Card.Title>
@@ -37,7 +43,9 @@ export default class Product extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-    </CardGroup>
+    </CardDeck>
 		)
 	}
 }
+
+export default withRouter(Product)

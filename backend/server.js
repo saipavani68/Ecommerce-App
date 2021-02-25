@@ -7,15 +7,29 @@ const usersRoutes = express.Router();
 const PORT = 4000;
 
 let users = require('./users.model');
+let Item = require('./item.model');
 
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/users', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/', { 
+    useNewUrlParser: true, 
+    useCreateIndex: true, 
+    useUnifiedTopology: true
+}); 
+
 const connection = mongoose.connection;
 
 connection.once('open', function() {
-    console.log("MongoDB database connection established successfully");
+    Item.deleteMany({}).then(function(){
+        Item.insertMany([ 
+            { id: 1, title: "Apple - MacBook Pro - 13 inch Display with Touch Bar - Intel Core i5 - 8GB Memory - 256GB SSD - Space Gray", description: " ", category: "electronics", image_name: "macbookpro.jpg", price: 1099.99 }
+        ]).then(function(){ 
+            console.log("Data inserted")  // Success 
+        }).catch(function(error){ 
+            console.log(error)      // Failure 
+        }); 
+    });
 })
 
 usersRoutes.route('/add').post(function(req, res) {

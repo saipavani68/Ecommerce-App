@@ -5,15 +5,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./components/sign-in.jsx";
 import Registration from "./components/registration.jsx";
 import ProductsContainer from './components/products-container.jsx';
+import ItemsPage from './components/items-page.jsx';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg navbar-light">
-            <div className="collpase navbar-collapse">
+            <div className="navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
                   <Link to="/products" className="nav-link">Products</Link>
@@ -33,10 +34,11 @@ class App extends Component {
           <Route path="/signIn" exact component={SignIn} />
           <Route path="/register" component={Registration} />
           <Route path="/products" component={ ProductsContainer } />
+          <Route path="/itemsPage" exact component={ItemsPage} />
         </div>
       </Router>
     );
   }
 }
 
-export default App;
+
