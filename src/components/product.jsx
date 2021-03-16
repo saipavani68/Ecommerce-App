@@ -8,16 +8,22 @@ import Card from 'react-bootstrap/Card';
 import './product.css';
  
 class Product extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { id: null };
+  }
 
-  handleClick = () => {
-    this.props.history.push('/itemsPage')
+  handleClick = (e) => {
+    this.setState({id: e.target.id}, function () {
+      this.props.history.push({pathname: '/itemsPage', state: this.state.id});
+  });
   }
 
 	render() {
 		return (
       <CardDeck>
         <Card onClick={ this.handleClick }>
-          <Card.Img variant="top" src={ officeProductsImg } />
+          <Card.Img variant="top" src={ officeProductsImg } id="office_products"/>
           <Card.Body>
             <Card.Title>Shop Office Furniture</Card.Title>
             <Card.Text>
@@ -25,8 +31,8 @@ class Product extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card onClick={ this.handleClick }>
-          <Card.Img variant="top" src={ clothingImg } />
+        <Card onClick={ this.handleClick } >
+          <Card.Img variant="top" src={ clothingImg } id="clothing_products"/>
           <Card.Body>
             <Card.Title> Shop Latest Fashion Trends </Card.Title>
             <Card.Text>
@@ -35,7 +41,7 @@ class Product extends Component {
           </Card.Body>
         </Card>
         <Card onClick={ this.handleClick }>
-          <Card.Img variant="top" src={ computersImg } />
+          <Card.Img variant="top" src={ computersImg } id="computer_products"/>
           <Card.Body>
             <Card.Title>Shop Computers & Accessories </Card.Title>
             <Card.Text>
