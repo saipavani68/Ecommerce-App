@@ -40,7 +40,19 @@ li a {
     top: 20px;
 }
 
+.cart-items-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 100px;
+}
+
 .item-content {
     border: 1px solid #DDD;
     padding: 30px;
+    display: flex;
+}
+
+.item-price {
+   padding: 0px 20px;
 }

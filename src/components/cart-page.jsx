@@ -7,12 +7,13 @@ class CartPage extends Component {
         const { items } = this.props
         return(
             <div className="cart-items-container">
-            { items.length > 0 && items.map(item => (
-                    <div className="item-content" key={ item[0].id }> 
-                        <div>{ item[0].title }, { item[0].description }  </div>
-                        <div> { item[0].price } </div>
-                    </div>
-                ))
+                <h2> Shopping Cart </h2>
+                { items.length > 0 && items.map(item => (
+                        <div className="item-content" key={ item[0].id }> 
+                            <div>{ item[0].title }, { item[0].description }  </div>
+                            <div className="item-price"> { item[0].price } </div>
+                        </div>
+                    ))
                 }
             </div>
         );
