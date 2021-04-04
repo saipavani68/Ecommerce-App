@@ -5,6 +5,7 @@ import './product.css';
 class CartPage extends Component {
     render () {
         const { items } = this.props
+        console.log(items);
         return(
             <div className="cart-items-container">
                 <h2> Shopping Cart </h2>
