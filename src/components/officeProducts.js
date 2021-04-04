@@ -1,5 +1,5 @@
 export const officeData = [{
-    "id": 1,
+    "id": 9,
     "title": "Vasagle",
     "description": "Rolling File Cabinet, Mobile Office Cabinet on Wheels, with 2 Drawers",
     "category": "office_furniture",
@@ -7,7 +7,7 @@ export const officeData = [{
     "price": 99.99
 },
 {
-    "id": 2,
+    "id": 10,
     "title": "Bush Business",
     "description": "Furniture Office by kathy ireland Echo 3 Drawer Mobile File Cabinet, Gray Sand",
     "category": "office_furniture",
@@ -15,7 +15,7 @@ export const officeData = [{
     "price": 275.99
 },
 {
-    "id": 3,
+    "id": 11,
     "title": "Tribesigns",
     "description": "Computer Desk, Extra Large Two person office desk with shelf",
     "category": "office_furniture",
@@ -23,7 +23,7 @@ export const officeData = [{
     "price": 99.28
 },
 {
-    "id": 4,
+    "id": 12,
     "title": "Bush Furniture",
     "description": "Bush Furniture Cabot L Shaped Desk with Hutch in Espresso Oak, CAB001EPO model, 4-port USB hub | L Shaped Desk",
     "category": "office_furniture",
@@ -31,7 +31,7 @@ export const officeData = [{
     "price": 450.00
 },
 {
-    "id": 5,
+    "id": 13,
     "title": "Tribesigns",
     "description": "Wide 5-Shelf Bookcase, Etagere Large Open Bookshelf Vintage Industrial Style Shelves Wood and Metal bookcases",
     "category": "office_furniture",
@@ -39,7 +39,7 @@ export const officeData = [{
     "price": 289.00
 },
 {
-    "id": 6,
+    "id": 14,
     "title": "Flash Furniture",
     "description": "Computer desk for small space",
     "category": "office_furniture",
@@ -47,7 +47,7 @@ export const officeData = [{
     "price": 108.79
 },
 {
-    "id": 7,
+    "id": 15,
     "title": "Max Studio",
     "description": "Women's 3/4 Sleeve Midi-Length Plaid Shirt Dress",
     "category": "office_furniture",
@@ -55,7 +55,7 @@ export const officeData = [{
     "price": 21.28
 },
 {
-    "id": 8,
+    "id": 16,
     "title": "Gates",
     "description": "Genuine Leather Aluminum Base High Back Executive Chair - Cream",
     "category": "office_furniture",

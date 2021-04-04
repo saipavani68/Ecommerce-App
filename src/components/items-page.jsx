@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
 import { clothingData } from '../components/fashionclothing.js';
 import { officeData } from '../components/officeProducts.js';
 import { computerProductsData } from '../components/computerProducts.js';
@@ -12,17 +13,14 @@ class ItemsPage extends Component {
  getData() {
     switch(this.props.location.state){
         case 'office_products': return officeData;
-                                break;
         case 'clothing_products': return clothingData;
-                                  break;
         case 'computer_products': return computerProductsData;
-                                  break;
+        default: break;
   }
 }
 
 render () {
     const items = this.getData();
-    console.log(items);
     return(
         <div className="items-container">
             <nav className="left-menu">
@@ -52,6 +50,7 @@ render () {
                     <Card.Body>
                         <Card.Title>{item.title}</Card.Title>
                         <Card.Text>{item.description} </Card.Text>
+                        <Button id={ item.id } onClick={ (e) => this.props.handleClick(e) }>Add to Cart</Button>
                     </Card.Body>
                 </Card>
             ))}
