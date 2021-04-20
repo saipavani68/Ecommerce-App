@@ -41,18 +41,36 @@ li a {
 }
 
 .cart-items-container {
-    width: 80%;
+    width: 70%;
     margin: auto;
     position: relative;
     top: 100px;
 }
 
-.item-content {
-    border: 1px solid #DDD;
+.cart-items-header {
+    margin-bottom: 20px;
+}
+
+.cart-item-content {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
     padding: 30px;
     display: flex;
 }
 
-.item-price {
+.cart-item-image {
+    height: 180px;
+    width: 15%;
+    margin-right: 30px;
+}
+
+.cart-item-title {
+    margin-right: 20px;
+}
+
+.cart-item-price {
    padding: 0px 20px;
+   position: absolute;
+   right: 0;
+   font-weight: bold;
 }
