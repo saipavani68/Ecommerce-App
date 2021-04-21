@@ -17,7 +17,7 @@ class CartPage extends Component {
                         </div>
                     ))
                 }
-                <h5 className="cart-total-price">Subtotal ({items.length}): { items.flat().reduce((a, b) => a + +b.price, 0)} </h5>
+                <h5 className="cart-total-price">Subtotal ({items.length}): { items.flat().reduce((a, b) => a + +b.price, 0).toFixed(2)} </h5>
             </div>
         );
     }
