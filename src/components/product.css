@@ -79,3 +79,11 @@ li a {
 .cart-total-price {
     margin: 20px 0 0;
 }
+
+.cart-empty-container {
+    border-bottom: none;
+}
+
+.cart-empty-container a {
+    padding-left: 5px;
+}
