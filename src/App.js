@@ -1,5 +1,5 @@
 import React, { useState, useReducer }  from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./components/sign-in.jsx";
@@ -58,12 +58,22 @@ function App() {
             </ul>
           </div>
         </nav>
+        <Route
+        exact
+        path="/"
+        render={() => {
+          return (
+              <Redirect to="/products" />
+            )
+          }
+        }
+      />
         <Route path="/signIn" exact component={SignIn} />
         <Route path="/register" component={Registration} />
         <Route path="/products" component={ ProductsContainer } />
         <Route path="/itemsPage" exact component={() => <ItemsPage handleClick={ handleClick }/>} />
         <Route path="/cart" exact component={() => <CartPage items={ state.items } /> } />
-        </div>
+      </div>
     </Router>
   );
 }
