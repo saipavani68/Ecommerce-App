@@ -5,6 +5,7 @@ import './product.css';
 class CartPage extends Component {
     render () {
         const { items } = this.props
+        console.log(items);
         return(
             <div className="cart-items-container">
                 <h2 className="cart-items-header"> Shopping Cart </h2>
@@ -16,7 +17,7 @@ class CartPage extends Component {
                         </div>
                     ))
                 }
-                <h5>Subtotal ({items.length}): { items[0].reduce((a, b) => a + +b.price, 0)} </h5>
+                <h5 className="cart-total-price">Subtotal ({items.length}): { items.flat().reduce((a, b) => a + +b.price, 0)} </h5>
             </div>
         );
     }
